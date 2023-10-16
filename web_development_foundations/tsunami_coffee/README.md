@@ -1,0 +1,1 @@
+Example webpage adapted using CSS media queries
