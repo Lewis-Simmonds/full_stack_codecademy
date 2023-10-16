@@ -1,0 +1,1 @@
+Example webpage adapted using responsive CSS according to the .png specification
