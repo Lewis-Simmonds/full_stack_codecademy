@@ -1,0 +1,131 @@
+body {
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+}
+
+header {
+    display: fixed;
+    height: 69px;
+}
+
+header img {
+    float: left;
+    height: 50px;
+    margin: 10px 0 10px 0;
+}
+
+header nav {
+    height: 69px;
+    display: flex;
+    float: right;
+    align-items: center;
+}
+
+header nav p {
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+.mission {
+    position: relative;
+    display: flex;
+    max-height: 700px;
+    max-width: 1200px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.mission-text {
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    right: 0; 
+    transform: translate(0, -50%); 
+    text-align: center;
+    background-color: black;
+    padding: 0;
+}
+
+.month {
+    position: relative;
+    max-width: 1000px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.month-text {
+    position: relative; 
+    text-align: center;
+    background-color: black;
+    padding: 25px 0 0 0;
+}
+
+.month-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.month-images div {
+    padding: 0 10px;
+}
+
+.month-images img {
+    height: 200px;
+    width: 300px;
+}
+
+.month-images h4 {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.locations {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    max-height: 500px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url(resources/img-locations-background.jpg);
+}
+
+.locations h2 {
+    margin: 0;
+    padding: 25px 0;
+}
+
+.location-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.location-boxes div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    opacity: 1; 
+    margin: 15px 20px 0 20px;
+}
+
+.location-boxes h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+#copyright {
+    text-align: left;
+    padding-left: 20px;
+}
