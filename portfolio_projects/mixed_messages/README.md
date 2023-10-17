@@ -1,0 +1,1 @@
+Project to build a random message generator every time the program is run
