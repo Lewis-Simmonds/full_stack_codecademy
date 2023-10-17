@@ -50,6 +50,7 @@ const properties = {
     },
     uranus: {
         color: "pale blue",
+        pressure: 1000,
         hydrogen: 83,
         helium: 15,
         methane: 2.5,
@@ -57,9 +58,36 @@ const properties = {
     },
     neptune: {
         color: "blue",
+        pressure: 1000,
         hydrogen: 80,
         helium: 19,
         methane: 0.5,
         other: 0.5
     }
 };
+
+//message generator function
+const messageGenerator = () => {
+
+    //pick a random planet
+    const planet = planets[Math.floor(Math.random() * 8)];
+
+    //get color and pressure of planet
+    const color = properties[planet].color;
+    const pressure = properties[planet].pressure;
+
+    //get random element property (not color or pressure)
+    const element_index = Math.floor((Math.random() * (Object.keys(properties[planet]).length - 2)) + 2);
+    const element = Object.keys(properties[planet])[element_index];
+   
+    //capitalize first letter of planet name
+    const planet_format = planet.charAt(0).toUpperCase() + planet.slice(1);
+
+    //print out random planet fact
+    console.log(`Facts about ${planet_format}!`);
+    console.log(`${planet_format} is ${properties[planet].color} in color.`);
+    console.log(`The surface pressure on ${planet_format} is ${properties[planet].pressure === 1000 ? ">>1000" : properties[planet].pressure}atm.`);
+    console.log(`${planet_format}'s atmosphere is made up of ${properties[planet][element]}% ${element === 'other' ? element + ' gases' : element}.`)
+}
+
+messageGenerator();
