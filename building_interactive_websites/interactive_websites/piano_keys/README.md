@@ -1,0 +1,1 @@
+Practice project to adapt provided HTML/CSS piano template into a functional piano
