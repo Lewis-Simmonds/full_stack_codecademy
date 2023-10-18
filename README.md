@@ -5,4 +5,4 @@ This section contains various small projects which demonstrates I am able to bui
 #### Web Development Foundations
 This section contains the standalone larger projects completed throughout the course.
 #### Building Interactive Websites
-This section contains various JavaScript programs.
+This section contains various projects and JavaScript programs, some of which are used to give interactive functionality to a webpage.
