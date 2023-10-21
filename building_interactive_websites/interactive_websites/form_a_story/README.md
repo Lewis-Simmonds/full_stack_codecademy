@@ -1,0 +1,1 @@
+The aim of this small project was to create a HTML form to allow users to form a story, by adding functionality to provided code.
