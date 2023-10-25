@@ -90,6 +90,17 @@ class CD extends Media {
         return this._songs;
     };
 
+    shuffle() {
+        let shuffledSongs = [];
+        while (shuffledSongs.length < this._songs.length) {
+            let randomIndex = Math.floor(Math.random() * this._songs.length);
+            if (!shuffledSongs.includes(this._songs[randomIndex])) {
+                shuffledSongs.push(this.songs[randomIndex]);
+            };
+        };      
+        return shuffledSongs;
+      };
+
 };
 
 
