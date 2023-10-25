@@ -1,0 +1,1 @@
+Practice task to create a parent class and subclasses for book, movie and CD for a virtual library

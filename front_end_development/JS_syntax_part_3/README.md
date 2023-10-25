@@ -1,0 +1,1 @@
+Intermediate level JavaScript projects and practice tasks in JavaScript Syntax Part 3 course
