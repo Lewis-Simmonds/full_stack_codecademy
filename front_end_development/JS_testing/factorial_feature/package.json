@@ -1,0 +1,17 @@
+{
+  "name": "factorial_feature",
+  "version": "1.0.0",
+  "description": "Run through an example of a test driven development cycle for a function to calculate factorials",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^10.2.0"
+  }
+}
