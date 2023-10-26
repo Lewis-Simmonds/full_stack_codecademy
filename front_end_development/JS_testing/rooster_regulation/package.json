@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "test": "test"
+  "scripts": {
+    "test": "mocha ./test/index_test.js"
   },
   "author": "",
   "license": "ISC",
