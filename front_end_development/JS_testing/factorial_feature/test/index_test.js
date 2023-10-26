@@ -17,6 +17,12 @@ describe('Calculate', () => {
             assert.strictEqual(actual, expected);
         });
 
+        it('will calculate 0! is equal to 1', () => {
+            const expected = 1;
+            const actual = Calculate.factorial(0);
+            assert.strictEqual(actual, expected);
+        });
+
     });
 
 });
