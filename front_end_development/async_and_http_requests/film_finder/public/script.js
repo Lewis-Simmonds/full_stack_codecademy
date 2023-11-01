@@ -1,4 +1,7 @@
-const tmdbKey = '';
+//import IMDB API key from hidden file
+import { apiKey } from '../confidential';
+
+const tmdbKey = apiKey;
 const tmdbBaseUrl = '';
 const playBtn = document.getElementById('playBtn');
 
