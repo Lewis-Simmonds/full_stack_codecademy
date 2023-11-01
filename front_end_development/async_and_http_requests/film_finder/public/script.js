@@ -2,11 +2,18 @@
 import { apiKey } from '../confidential';
 
 const tmdbKey = apiKey;
-const tmdbBaseUrl = '';
+const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 const playBtn = document.getElementById('playBtn');
 
-const getGenres = () => {
+const getGenres = async () => {
+    const genreRequestEndpoint = 'genre/movie/list';
+    const requestParams = `?api_key=${tmdbKey}`;
+    const urlToFetch = tmdbBaseUrl + genreRequestEndpoint + requestParams;
+    try {
 
+    } catch(error) {
+        console.log(error);
+    };
 };
 
 const getMovies = () => {
