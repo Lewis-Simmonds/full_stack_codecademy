@@ -1,0 +1,1 @@
+JavaScript projects and practice tasks using async/await, HTTP requests and APIs

@@ -1,0 +1,1 @@
+Practice task to implement JS functionality using IMDB API and HTTP requests
