@@ -1,7 +1,4 @@
-//import IMDB API key from hidden file
-import { apiKey } from './confidential.js';
-
-const tmdbKey = apiKey;
+const tmdbKey = "f3261e31fc71ead699940b6db6187a8c";
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 const playBtn = document.getElementById('playBtn');
 
@@ -13,6 +10,7 @@ const getGenres = async () => {
       let response = await fetch(urlToFetch, {method: 'GET'});
       if (response.ok) {
           let jsonResponse = await response.json();
+          console.log
           let genres = jsonResponse.genres;
           return genres;
       }
@@ -29,8 +27,8 @@ const getMovies = async () => {
   try {
     let response = await fetch(urlToFetch, {method: 'GET'});
     if (response.ok) {
-      let jsonReponse = await response.json();
-      let movies = jsonResponse.movies;
+      let jsonResponse = await response.json();
+      let movies = jsonResponse.results;
       return movies;
     }
   } catch(error) {
@@ -40,6 +38,7 @@ const getMovies = async () => {
 
 const getMovieInfo = async movie => {
   const movieId = movie.id;
+  console.log(movieId);
   const movieEndpoint = `/movie/${movieId}`;
   const requestParams = `?api_key=${tmdbKey}`;
   const urlToFetch = tmdbBaseUrl + movieEndpoint + requestParams;
@@ -55,12 +54,15 @@ const getMovieInfo = async movie => {
 };
 
 // Gets a list of movies and ultimately displays the info of a random movie from the list
-const showRandomMovie = () => {
-const movieInfo = document.getElementById('movieInfo');
-if (movieInfo.childNodes.length > 0) {
-  clearCurrentMovie();
-};
-
+const showRandomMovie = async () => {
+  const movieInfo = document.getElementById('movieInfo');
+  if (movieInfo.childNodes.length > 0) {
+    clearCurrentMovie();
+  };
+  const movies = await getMovies();
+  const randomMovie = await getRandomMovie(movies);
+  const info = await getMovieInfo(randomMovie);
+  displayMovie(info);
 };
 
 getGenres().then(populateGenreDropdown);
