@@ -18,10 +18,8 @@ export default function App() {
     },
   ]);
 
-  const addThought = thought => {
-    setThoughts((thoughts) => {
-      return [thought, ...thoughts];
-    });
+  const addThought = (thought) => {
+    setThoughts(thoughts => [thought, ...thoughts]);
   };
 
   return (
