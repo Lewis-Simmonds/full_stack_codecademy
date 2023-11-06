@@ -23,11 +23,9 @@ export default function App() {
   };
 
   const removeThought = (thoughtIdToRemove) => {
-    setThoughts(thoughts => {
-      thoughts.filter((thought) => {
-        thought.id !== thoughtIdToRemove;
-      });
-    });
+    setThoughts((thoughts) => 
+      thoughts.filter((thought) => thought.id !== thoughtIdToRemove)
+    );
   };
 
   return (
