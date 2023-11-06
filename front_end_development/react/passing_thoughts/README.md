@@ -1,1 +1,1 @@
-Practice project to create basic web app using React framework
+Practice project to create basic web app using React framework. User can input thoughts, which can then either be removed by the user, or will be automatically deleted after 15 seconds.
