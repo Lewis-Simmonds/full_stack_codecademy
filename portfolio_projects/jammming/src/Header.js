@@ -1,18 +1,8 @@
 import React from 'react';
 
 function Header() {
-
-  const headerStyle = {
-    height: '100px',
-    backgroundColor: 'darkblue',
-    color: 'white',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  };
-
   return (
-    <div style={headerStyle}>
+    <div className="header">
       <h1>Ja<span style={{color: 'blueviolet'}}>mmm</span>ing</h1>
     </div>
   );
