@@ -24,4 +24,18 @@ body {
   background-color: blueviolet;
 }
 
+.search-box {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchform {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
