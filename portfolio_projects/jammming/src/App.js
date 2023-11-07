@@ -1,6 +1,14 @@
+import React from 'react';
+import Header from './Header';
+
 function App() {
   return (
-    <p>Test</p>
+    <div>
+      <Header />
+    </div>
+      
+    
+
   );
 };
 
