@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import "./Search.css";
 
-function Search() {
+function Search(props) {
+
+  const [term, setTerm] = useState("");
+
+  const handleTermChange = useCallback((event) => {
+    setTerm(event.target.value);
+  }, []);
+
+  const search = useCallback(() => {
+    props.onSearch(term);
+  }, [props.onSearch, term]);
+
   return (
-    <>
-      <form action="" className="search-form">
-        <input type="text" placeholder="Search..." name="search"/>
-        <button type="submit">Search</button>
-      </form>
-    </>
+    <div className="search-form">
+      <input type="text" placeholder="Search For A Track" onChange={handleTermChange} />
+      <button onClick={search}>Search</button>
+    </div>
   );
 };
 
