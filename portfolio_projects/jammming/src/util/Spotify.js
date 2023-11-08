@@ -1,8 +1,10 @@
-import { clientSecret } from "./ClientSecret.js";
+/*import { clientSecret } from "./ClientSecret.js";*/
 
+const clientSecret = "410bc8b430b74c8e8a6445fc40367711"
 const clientId = "b3bea91bf49d4df69bc92dc2c40697ac";
-const redirectUrl = 'http://localhost:3000/';
+const redirectUri = 'http://localhost:3000/';
 let accessToken;
+let expiryTime;
 
 const Spotify = {
     /*NEED TO ADD FUNCTIONALITY TO CHECK EXPIRY TIME ON ACCESS TOKEN*/
@@ -21,12 +23,17 @@ const Spotify = {
         .then(response => response.json())
         .then(response => {
             accessToken = response.access_token;
-            return accessToken;
+            let timeNow = new Date().getTime();
+            expiryTime = new Date(timeNow + response.expires_in * 1000);
         });
     }
 };
 
 Spotify.getAccessToken();
 setTimeout(() => {console.log(accessToken)}, 2000);
+setTimeout(() => {console.log(expiryTime)}, 2500);
+
+let now = new Date();
+console.log(now);
 
 
