@@ -1,0 +1,45 @@
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 1rem;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+}
+
+h1 > span {
+    color: 'blueviolet';
+}
+  
+.content {
+    height: 90vh;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+}
+  
+.search-box {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.search-form {
+    height: 80%;
+    width: 30vw;
+    display: grid;
+    grid: repeat(2, 50%) / 100%;
+    justify-content: center;
+    align-items: center;
+}
+  
+.lists {
+    height: 80%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+  
+  
+  
