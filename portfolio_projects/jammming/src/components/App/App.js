@@ -7,13 +7,9 @@ function App() {
   return (
     <>
       <h1>Ja<span>mmm</span>ing</h1>
-      <div className="content">
-        <div className="search-box">
-          <Search />
-        </div>
+      <Search />
         <div className="lists">
         </div>
-      </div>
     </>  
   );
 };

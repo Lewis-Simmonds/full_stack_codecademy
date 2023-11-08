@@ -1,0 +1,17 @@
+.search-form {
+    display: grid;
+    grid: repeat(2, 2rem) / auto;
+    grid-gap: 0.5rem;
+    justify-items: center;
+    height: 5rem;
+    margin: 1rem auto;
+}
+
+.search-form input {
+    width: 30vw;
+}
+
+.search-form button {
+    width: 15vw;
+}
+  
